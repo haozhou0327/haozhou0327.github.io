@@ -1,0 +1,973 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="71EUE2ypoUHb67A40K7sUmCJS_nq1Lfx7yM-hfJ7EsI" />
+
+
+
+
+  <meta name="baidu-site-verification" content="7MSslL0PKr" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Github,Hexo," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="欢迎访问我的博客：非著名数据猿
+Github地址：https://github.com/haozhou0327/haozhou0327.github.io
+很久之前就想搭建一个博客，为什么会有这个想法呢？第一个原因，是可以装B（哈哈哈）；第二个原因，是有一种成就感（其实还是装B，哈哈）。虽然现在已经不是博客盛行的年代了，如今有诸多自媒体平台诞生，微信、简书、头条号等等诸如此类，真的太多了，但是，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一个小白搭建博客的心路历程">
+<meta property="og:url" content="http://www.haojunyu.xyz/posts/42985/index.html">
+<meta property="og:site_name" content="非著名数据猿">
+<meta property="og:description" content="欢迎访问我的博客：非著名数据猿
+Github地址：https://github.com/haozhou0327/haozhou0327.github.io
+很久之前就想搭建一个博客，为什么会有这个想法呢？第一个原因，是可以装B（哈哈哈）；第二个原因，是有一种成就感（其实还是装B，哈哈）。虽然现在已经不是博客盛行的年代了，如今有诸多自媒体平台诞生，微信、简书、头条号等等诸如此类，真的太多了，但是，">
+<meta property="og:image" content="http://ogunwti03.bkt.clouddn.com/2016111801.jpg">
+<meta property="og:image" content="http://ogunwti03.bkt.clouddn.com/2016111802.png">
+<meta property="og:image" content="http://ogunwti03.bkt.clouddn.com/2016111803.jpeg">
+<meta property="og:updated_time" content="2016-12-03T17:29:59.974Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="一个小白搭建博客的心路历程">
+<meta name="twitter:description" content="欢迎访问我的博客：非著名数据猿
+Github地址：https://github.com/haozhou0327/haozhou0327.github.io
+很久之前就想搭建一个博客，为什么会有这个想法呢？第一个原因，是可以装B（哈哈哈）；第二个原因，是有一种成就感（其实还是装B，哈哈）。虽然现在已经不是博客盛行的年代了，如今有诸多自媒体平台诞生，微信、简书、头条号等等诸如此类，真的太多了，但是，">
+<meta name="twitter:image" content="http://ogunwti03.bkt.clouddn.com/2016111801.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '6353582143330846000',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://www.haojunyu.xyz/posts/42985/"/>
+
+
+
+
+
+  <title> 一个小白搭建博客的心路历程 | 非著名数据猿 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', '87631716-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">非著名数据猿</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">大数据，从被忽悠到会忽悠！</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+
+
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://www.haojunyu.xyz/posts/42985/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="郝洲">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/haoz.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="非著名数据猿">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="非著名数据猿" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                一个小白搭建博客的心路历程
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-11-15T23:35:58+08:00">
+                2016-11-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">Hexo</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <a href="/posts/42985/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="posts/42985/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/posts/42985/" class="leancloud_visitors" data-flag-title="一个小白搭建博客的心路历程">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          <span class="post-time">
+     &nbsp; <br/> &nbsp;
+           <span class="post-meta-item-icon">
+             <i class="fa fa-calendar-o"></i>
+           </span>
+           <span class="post-meta-item-text">本文总共 </span>
+           <span class="post-count"> 字</span>
+           
+         </span>
+    
+      <span class="post-time">
+     &nbsp; | &nbsp;
+           <span class="post-meta-item-icon">
+             <i class="fa fa-calendar-o"></i>
+           </span>
+           <span class="post-meta-item-text">阅读预计 </span>
+           <span class="post-count"> 分钟</span>
+           
+         </span>
+
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="http://ogunwti03.bkt.clouddn.com/2016111801.jpg" alt="hello-world"></p>
+<p>欢迎访问我的博客：<a href="http://www.haojunyu.xyz/"><font color="#f44336"><strong>非著名数据猿</strong></font></a></p>
+<p>Github地址：<a href="https://github.com/haozhou0327/haozhou0327.github.io" target="_blank" rel="external">https://github.com/haozhou0327/haozhou0327.github.io</a></p>
+<p>很久之前就想搭建一个博客，为什么会有这个想法呢？第一个原因，是可以装B（哈哈哈）；第二个原因，是有一种成就感（其实还是装B，哈哈）。虽然现在已经不是博客盛行的年代了，如今有诸多自媒体平台诞生，微信、简书、头条号等等诸如此类，真的太多了，但是，依旧想自己动手搭建一个博客，体验一下搭建的过程，也是一种乐趣。</p>
+<a id="more"></a>
+<p><em>题外话：说到这里，推荐阅读一篇文章——《<a href="http://www.fox2008.cn/ebook/ylyw/yiwen/content/yiwe20060213.html" target="_blank" rel="external">博客盛行的年代</a>》（作者：包慧怡），2006年的一篇文章，最后一段文字是这么写的：“有人视博客为交际工具，广结缘，频通信；有人视博客为职场备案，勤整理，深反省；有人视博客为弄墨圃地，今晨文为情声，明晌为文造情；有人视博客为第二生命，一日不博，心痒难定。说到底，博客还是个没要紧的东西。所谓我博故我在，终究不过是懒于思索又深恐自己懒于思索（或者说，深恐被认为懒于思索）的人用来鞭笞自己的形式主义。各路高人看客大可各遂所愿，按需偷窥，其实，这也是网络时代最看得见摸得着的民主之一。”你是如何看待博客呢？</em></p>
+<hr>
+<p>回归正题。</p>
+<p>名博<a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html" target="_blank" rel="external">阮一峰</a>曾经说过：</p>
+<p id="div-border-left-red"> 喜欢写Blog的人，会经历三个阶段。<br><br> 1. 第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。<br> 2. 第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。<br> 3. 第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。<br></p>
+
+<p>如果你想到达第三个阶段，选择在github上搭建就是一个很好的思路。</p>
+<p>于是乎，我开始上网找教程，第一感觉是兴奋，因为看到了太多的教程。当你在搜索引擎搜索“Hexo和Github搭建博客”时，心里不免感叹“哇，这么多教程，真好”。虽然我也是跟着这些教程走过来的，但是我想说，看教程很简单，但如果不亲自去尝试、去折腾，真的不能很好的应对每一个细节。由于整个搭建过程的思路和步骤是不变的，所以很多教程内容差不多。</p>
+<p>在看了很多篇教程之后，决心开始自己动手操作，前后折腾了3个晚上（其实真的要不了很久，也是因为走了一点弯路），终于搭建完成，也修改了一部分配置，以后逐步增加更多好玩的功能！如果你发现有什么bug，或者有什么建议，欢迎一起交流。个人微信/QQ：<span id="inline-green">598957481</span>。</p>
+<p>在博客搭建完成之后，有一位群友也想自己搭建，认为网上的教程总是出现一些自己不知道怎么解决的问题，所以我就想写一个出来，我这个不能称之为教程，只能算记录下自己搭建的过程。</p>
+<p>本人非计算机出身，也非程序猿，仅仅是个人喜好，对这个比较感兴趣，我会尽可能详细的整理这个过程，供参考。可能也会引用到其他作者的一些内容，在此感谢提供教程的作者们。</p>
+<p>在此之前，先推荐阅读几篇文章：</p>
+<p id="div-border-left-red">1. <a href="https://zhuanlan.zhihu.com/p/19743861" target="_blank" rel="external"><font color="#4caf50"> 为什么你要写博客？ </font> </a><br> 2. <a href="https://zhuanlan.zhihu.com/p/19743255" target="_blank" rel="external"><font color="#4caf50"> 我的博客时代 </font> </a><br></p>
+
+<p>我觉得有一个作者的一句话写的很好：为什么要搭建一个独立博客？因为独立的才是自己的。</p>
+<p>入门槛是什么？</p>
+<p id="div-border-left-red">我的总结是：<br><br> 1. 经得起折腾<br> 2. 敢于钻研<br> 3. 有耐心<br></p>
+
+<hr>
+<p><img src="http://ogunwti03.bkt.clouddn.com/2016111802.png" alt="Github + Hexo"></p>
+<p>入门知识：</p>
+<p id="div-border-left-red"> 1. GitHub Pages是什么？——请自行google（不要用baidu，不要用baidu，不要用baidu，关于搜索引擎的使用，本人曾被 我最鄙视的某个领导 鄙视过。）<br> 2. Hexo是什么？——请自行google。<br></p>
+
+<p>准备工作：</p>
+<p id="div-border-left-red">在开始一切之前，你必须已经具备以下条件：<br><br> 1. 有一个github账号，没有的话去注册一个（注册账号教程请自行google）；<br> 2. 安装了node.js、npm，并了解相关基础知识；<br> 3. 安装了git（或者其它git客户端）。<br></p>
+
+<p>后文会详细讲述安装过程。</p>
+<p>本人的安装环境：</p>
+<p id="div-border-left-red">1. Windows10系统 64位<br> 2. <a href="https://nodejs.org/en/" target="_blank" rel="external"><font color="#4caf50"> node.js </font> </a>@v7.0.0<br> 3. <a href="https://git-scm.com/" target="_blank" rel="external"><font color="#4caf50"> git </font> </a>@2.10.2<br> 4. <a href="https://hexo.io/zh-cn/" target="_blank" rel="external"><font color="#4caf50"> hexo </font> </a>@3.2.2<br></p>
+
+<p>OK,这篇文章就到这里，从下一篇文章开始，会详细介绍搭建过程。</p>
+<p>附思维导图：</p>
+<p><img src="http://ogunwti03.bkt.clouddn.com/2016111803.jpeg" alt="思维导图"></p>
+<p>附参考教程：</p>
+<ol>
+<li><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external"><font color="#4caf50"> 官方文档 </font> </a></li>
+<li><a href="http://blog.csdn.net/poem_of_sunshine/article/details/29369785/" target="_blank" rel="external"><font color="#4caf50"> 如何搭建一个独立博客——简明Github Pages与Hexo教程 </font> </a></li>
+<li><a href="http://www.jianshu.com/p/15ae47eddc56" target="_blank" rel="external"><font color="#4caf50"> 小白独立搭建博客–Github Pages和Hexo简明教程 </font> </a></li>
+<li><a href="http://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html" target="_blank" rel="external"><font color="#4caf50"> 使用hexo+github搭建免费个人博客详细教程 </font> </a></li>
+<li><a href="http://www.jianshu.com/p/858ecf233db9" target="_blank" rel="external"><font color="#4caf50"> 通过Hexo在Github上搭建博客教程 </font> </a></li>
+<li><a href="http://blog.liuxianan.com/build-blog-website-by-hexo-github.html" target="_blank" rel="external"><font color="#4caf50"> 使用hexo+github搭建免费个人博客详细教程 </font> </a></li>
+<li><a href="http://www.isetsuna.com/hexo/install-config/" target="_blank" rel="external"><font color="#4caf50"> Hexo博客系列（二）：安装和配置 </font> </a></li>
+<li><a href="http://weizhifeng.net/node-version-management-via-n-and-nvm.html" target="_blank" rel="external"><font color="#4caf50"> 利用n和nvm管理Node的版本 </font> </a></li>
+</ol>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/images/weixin_gongzhonghao.png" alt="郝洲 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎扫一扫订阅微信公众号！</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0px; margin: 20px auto; width: 90%; text-align: center;">
+    <div>我坚信，赞赏是不耍流氓的鼓励！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span onmouseover="this.style.color='rgb(244, 67, 54)';this.style.background='rgb(204,204,204)'" onmouseout="this.style.color='#fff';this.style.background='rgb(244, 67, 54)'" style="display: inline-block; width: 70px; height: 70px; border-radius: 100%; color: rgb(255, 255, 255); font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 35px; line-height: 65px; font-family: Microsoft Yahei; background: rgb(244, 67, 54);">赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechat.png" alt="郝洲 WeChat Pay"/>
+          <p>微信赞赏</p>
+        </div>
+      
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Github/" rel="tag"># Github</a>
+          
+            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/posts/32224/" rel="prev" title="Hexo博客搭建系列（一）：环境配置">
+                Hexo博客搭建系列（一）：环境配置 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="posts/42985/"
+     data-title="一个小白搭建博客的心路历程"
+     data-content=""
+     data-url="http://www.haojunyu.xyz/posts/42985/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="posts/42985/"
+           data-title="一个小白搭建博客的心路历程" data-url="http://www.haojunyu.xyz/posts/42985/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/haoz.jpg"
+               alt="郝洲" />
+          <p class="site-author-name" itemprop="name">郝洲</p>
+          <p class="site-description motion-element" itemprop="description">不忘初心，方得始终！</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+                
+
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/haozhou0327" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://stackexchange.com/users/9684393/zhou-hao" target="_blank" title="stack-overflow">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  stack-overflow
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/haozhou0327" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.jianshu.com/users/290e88b7b829/latest_articles" target="_blank" title="简书">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  简书
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">郝洲</span>
+</div>
+
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+您是第 <span id="busuanzi_value_site_uv"></span> 位访客，
+本站总访问量 <span id="busuanzi_value_site_pv"></span> 次 
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"haozhou"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.unstable.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('footer')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("znCJFj9QAoG9Y8cq3ndMTcps-gzGzoHsz", "oAcEo7QYcySBgzWkQFDDI8DO");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+
+</body>
+</html>
