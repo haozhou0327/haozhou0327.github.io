@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+    
+    <entry>
+      <title><![CDATA[Hexo博客搭建系列（四）：修改主题]]></title>
+      <url>%2Fposts%2F49147%2F</url>
+      <content type="text"><![CDATA[本文讲述如何修改Hexo主题。 一、进入Hexo的官网主题专栏 二、挑选自己喜欢的主题 官网有很多主题供我们选择，首先选择自己喜欢的主题点击进去，然后进入到它的github地址，我们只要把这个地址复制下来(例如我的选择：hexo-theme-next这个主题，github地址：https://github.com/iissnan/hexo-theme-next) 三、克隆主题 打开Hexo文件夹下的themes目录（C:\Hexo\themes），右键Git Bash，在命令行输入： 1$ git clone https://github.com/iissnan/hexo-theme-next 回车。 下载中…等待下载完成。 四、修改Hexo配置文件 下载完成后，打开Hexo文件夹下的站点配置文件_config.yml 修改参数： theme: hexo-theme-next 五、部署主题，本地查看效果 返回Hexo目录，右键Git Bash，输入： 12$ hexo g$ hexo s 打开浏览器，输入 http://localhost:4000/ 即可看见我们的主题已经更换了。 六、如果效果满意，将它部署到Github上 打开Hexo文件夹，右键Git Bash，输入 12$ hexo clean$ hexo g -d 站点配置文件_config.yml中有关deploy的部分： 1234$ deploy:$ type: git$ repository: https://github.com/haozhou0327/haozhou0327.github.io.git$ branch: master 七、打开自己的主页，即可看到修改后的效果 更多修改效果请查看对应主题的说明文档，点击此查看本主题(Next)对应的说明文档。 本文完。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Hexo博客搭建系列（三）：部署至Github]]></title>
+      <url>%2Fposts%2F61018%2F</url>
+      <content type="text"><![CDATA[本文讲述Hexo部署至Github的过程 注册Github 1. 访问 Github 首页 2. 点击右上角的 Sign Up，注册自己的账户 注册账号过程，自行Google 创建项目代码库 注册完登陆后，我们就创建一个我们自己的Github Pages项目。点击New repository。 创建要点如下： 配置SSH密钥配置Github的SSH密钥可以让本地git项目与远程的github建立联系，让我们在本地写了代码之后直接通过git操作就可以实现本地代码库与Github代码库同步。操作如下： 第一步、看是否存在SSH密钥(keys)首先，我们需要看看是否看看本机是否存在SSH keys,打开Git Bash,并运行: 1$ cd ~/. ssh 检查你本机用户home目录下是否存在.ssh目录 如果，不存在此目录，则进行第二步操作，否则，你本机已经存在ssh公钥和私钥，可以略过第二步，直接进入第三步操作。 第二步、创建一对新的SSH密钥(keys)1$ ssh-keygen -t rsa -C &quot;your_email@example.com&quot; 这将按照你提供的邮箱地址，创建一对密钥 Generating public/private rsa key pair.Enter file in which to save the key (/c/Users/you/.ssh/id_rsa): [Press enter] 直接回车，则将密钥按默认文件进行存储。此时也可以输入特定的文件名，比如/c/Users/you/.ssh/github_rsa 接着，根据提示，你需要输入密码和确认密码（说到这里，如果你很放心，其实可以不用密码，就是到输密码的地方，都直接回车，所以每次push就只管回车就行了。所谓的最安全的密码，就是没有密码 哈哈）。相关提示如下： Enter passphrase (empty for no passphrase): [Type a passphrase]Enter same passphrase again: [Type passphrase again] 输入完成之后，屏幕会显示如下信息： Your identification has been saved in /c/Users/you/.ssh/id_rsa.Your public key has been saved in /c/Users/you/.ssh/id_rsa.pub.The key fingerprint is:01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@example.com 第三步、在GitHub账户中添加你的公钥运行如下命令，将公钥的内容复制到系统粘贴板(clipboard)中。 1$ clip &lt; ~/.ssh/id_rsa.pub 接着： 登陆GitHub,进入你的Account Settings. 选择SSH Keys 粘贴密钥，添加即可 第四步、测试可以输入下面的命令，看看设置是否成功，git@github.com的部分不要修改： 1$ ssh -T git@github.com 如果是下面的反馈： The authenticity of host ‘github.com (207.97.227.239)’ can’t be established.RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.Are you sure you want to continue connecting (yes/no)? 不要紧张，输入yes就好，然后会看到： Hi cnfeat! You’ve successfully authenticated, but GitHub does not provide shell access. 第五步、设置用户信息现在你已经可以通过SSH链接到GitHub了，还有一些个人信息需要完善的。Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信息来做权限的处理，输入下面的代码进行个人信息的设置，把名称和邮箱替换成你自己的，名字必须是你的真名，而不是GitHub的昵称。 12$ git config --global user.name &quot;cnfeat&quot;//用户名$ git config --global user.email &quot;cnfeat@gmail.com&quot;//填写自己的邮箱 第六步、SSH Key配置成功本机已成功连接到github。 如有问题，请参考： GitHub Help - Generating SSH Keys Error: Permission denied (publickey) 将本地的Hexo文件更新到Github的库中第一步、登录Github打开自己的项目 username.github.io 第二步、打开之后，点击HTTPS，选择HTTPS类型地址，复制地址 第三步、打开一开始创建的Hexo文件夹（如C:\Hexo），用notepad++或者sublime text打开刚文件夹下的_config.yml文件 第四步、在配置文件里作如下修改，保存 第五步、在Hexo文件夹下执行12$ hexo g$ hexo d 或者直接执行 1$ hexo g -d 执行完之后会让你输入github的账号和密码，输入完后就可以登录我们自己的部署在Github Pages服务器上的博客了。对应的地址是 username.github.io。 第六步、在浏览器上输入自己的主页地址在浏览器上输入即可看到我们自己的博客]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Hexo博客搭建系列（二）：Hexo安装]]></title>
+      <url>%2Fposts%2F10749%2F</url>
+      <content type="text"><![CDATA[本文讲述Hexo的安装 最好的教程（没有之一）是：官方文档 安装Hexo所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。 1$ npm install -g hexo-cli 初始化安装 Hexo 完成后，在某个位置（比如E盘）新建一个文件夹，命名为“Hexo”或者其他均可，然后进入此文件夹右键打开Git，执行下列命令，Hexo 将会在该文件夹中新建所需要的文件。即创建工作目录。 12$ hexo init$ npm install 命令执行完成后，会生成一系列目录文件。具体每个文件尤其是配置文件_config.yml是做什么的，参考官方文档，这里不详细说明。 安装依赖包为了以后避免出错，就将下面的插件都一次性安装完。 12345678910111213npm install hexo-generator-index --savenpm install hexo-generator-archive --savenpm install hexo-generator-category --savenpm install hexo-generator-tag --savenpm install hexo-server --savenpm install hexo-deployer-git --savenpm install hexo-deployer-heroku --savenpm install hexo-deployer-rsync --savenpm install hexo-deployer-openshift --savenpm install hexo-renderer-marked@0.2 --savenpm install hexo-renderer-stylus@0.2 --savenpm install hexo-generator-feed@1 --savenpm install hexo-generator-sitemap@1 --save 生成静态页面使用 cd 命令到你的hexo安装目录（工作目录），执行如下命令：（不清楚怎么使用cd命令的话，就直接手动打开hexo的安装目录，然后在此文件夹下右键打开Git） 1$ hexo generate 简写 hexo g 必须到你新建的hexo安装目录下执行，否则不成功 本地启动测试继续输入命令： 1$ hexo server 简写 hexo s 到此本地服务已经完成，可以在本地浏览器中输入http://localhost:4000进行查看。 就可以看到如下的画面了： 关于Hexo安装的部分就写到这里了。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Hexo博客搭建系列（一）：环境配置]]></title>
+      <url>%2Fposts%2F32224%2F</url>
+      <content type="text"><![CDATA[本文讲述使用Github Pages与Hexo搭建独立博客的环境配置 看了几十篇教程，折腾了三个晚上，最终发现，最好的教程（没有之一）是：官方文档 这是Hexo官方文档（中文版），如果你的英语水平很高，就选择英文版吧。 在文章《一个小白搭建博客的心路历程》中已经对Hexo博客搭建有了一些初步介绍，以及搭建流程介绍。这篇文章开始详细介绍搭建过程。 安装Git Windows：下载并安装 git . 安装步骤： 这一步中其他的勾不勾选无所谓，“Git Bash here”和“Git GUI here”最好都勾选： 这一步中默认是第一个，选择默认就好。选第二个也无所谓。 等待…至此Git就安装成功了。 至于怎么打开Git Bash here，右键即可。 Git入门教程： Pro Git（中文版） 安装Node.js Node.js下载：官网 安装过程几乎一路“next（下一步）”，此处不详细截图。 Hexo的官方文档说安装 Node.js 的最佳方式是使用 nvm 本人最开始直接下载的安装程序，最后发现nvm这种方式更好，推荐使用。 cURL: 1$ curl https://raw.github.com/creationix/nvm/v1.1.1/install.sh | sh 在这里强烈建议看这篇文章：利用n和nvm管理Node的版本 官网给出的方式中间使用的是master，不清楚具体什么意思，但直接使用好像有点问题。我直接按照这篇文章改成最新的版本号：v1.1.1，成功安装。 关于安装nvm的另一种方法： Wget: 1$ wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh 本人尝试过，貌似有点不太好用，没有深究。 接下来安装node： 1$ nvm install 7.0.0 使用指定的版本 1$ nvm use 7.0.0 这里官方文档是： $ nvm install stable （好像不太好使，我没有深究） 查看当前已经安装的版本 $ nvm ls.nvm 查看正在使用的版本 $ nvm currentv1.1.1 至此Node.js就安装成功了，博客搭建所需的环境就配置好了。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[一个小白搭建博客的心路历程]]></title>
+      <url>%2Fposts%2F42985%2F</url>
+      <content type="text"><![CDATA[欢迎访问我的博客：非著名数据猿 Github地址：https://github.com/haozhou0327/haozhou0327.github.io 很久之前就想搭建一个博客，为什么会有这个想法呢？第一个原因，是可以装B（哈哈哈）；第二个原因，是有一种成就感（其实还是装B，哈哈）。虽然现在已经不是博客盛行的年代了，如今有诸多自媒体平台诞生，微信、简书、头条号等等诸如此类，真的太多了，但是，依旧想自己动手搭建一个博客，体验一下搭建的过程，也是一种乐趣。 题外话：说到这里，推荐阅读一篇文章——《博客盛行的年代》（作者：包慧怡），2006年的一篇文章，最后一段文字是这么写的：“有人视博客为交际工具，广结缘，频通信；有人视博客为职场备案，勤整理，深反省；有人视博客为弄墨圃地，今晨文为情声，明晌为文造情；有人视博客为第二生命，一日不博，心痒难定。说到底，博客还是个没要紧的东西。所谓我博故我在，终究不过是懒于思索又深恐自己懒于思索（或者说，深恐被认为懒于思索）的人用来鞭笞自己的形式主义。各路高人看客大可各遂所愿，按需偷窥，其实，这也是网络时代最看得见摸得着的民主之一。”你是如何看待博客呢？ 回归正题。 名博阮一峰曾经说过： 喜欢写Blog的人，会经历三个阶段。 1. 第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。 2. 第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。 3. 第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。 如果你想到达第三个阶段，选择在github上搭建就是一个很好的思路。 于是乎，我开始上网找教程，第一感觉是兴奋，因为看到了太多的教程。当你在搜索引擎搜索“Hexo和Github搭建博客”时，心里不免感叹“哇，这么多教程，真好”。虽然我也是跟着这些教程走过来的，但是我想说，看教程很简单，但如果不亲自去尝试、去折腾，真的不能很好的应对每一个细节。由于整个搭建过程的思路和步骤是不变的，所以很多教程内容差不多。 在看了很多篇教程之后，决心开始自己动手操作，前后折腾了3个晚上（其实真的要不了很久，也是因为走了一点弯路），终于搭建完成，也修改了一部分配置，以后逐步增加更多好玩的功能！如果你发现有什么bug，或者有什么建议，欢迎一起交流。个人微信/QQ：598957481。 在博客搭建完成之后，有一位群友也想自己搭建，认为网上的教程总是出现一些自己不知道怎么解决的问题，所以我就想写一个出来，我这个不能称之为教程，只能算记录下自己搭建的过程。 本人非计算机出身，也非程序猿，仅仅是个人喜好，对这个比较感兴趣，我会尽可能详细的整理这个过程，供参考。可能也会引用到其他作者的一些内容，在此感谢提供教程的作者们。 在此之前，先推荐阅读几篇文章： 1. 为什么你要写博客？ 2. 我的博客时代 我觉得有一个作者的一句话写的很好：为什么要搭建一个独立博客？因为独立的才是自己的。 入门槛是什么？ 我的总结是： 1. 经得起折腾 2. 敢于钻研 3. 有耐心 入门知识： 1. GitHub Pages是什么？——请自行google（不要用baidu，不要用baidu，不要用baidu，关于搜索引擎的使用，本人曾被 我最鄙视的某个领导 鄙视过。） 2. Hexo是什么？——请自行google。 准备工作： 在开始一切之前，你必须已经具备以下条件： 1. 有一个github账号，没有的话去注册一个（注册账号教程请自行google）； 2. 安装了node.js、npm，并了解相关基础知识； 3. 安装了git（或者其它git客户端）。 后文会详细讲述安装过程。 本人的安装环境： 1. Windows10系统 64位 2. node.js @v7.0.0 3. git @2.10.2 4. hexo @3.2.2 OK,这篇文章就到这里，从下一篇文章开始，会详细介绍搭建过程。 附思维导图： 附参考教程： 官方文档 如何搭建一个独立博客——简明Github Pages与Hexo教程 小白独立搭建博客–Github Pages和Hexo简明教程 使用hexo+github搭建免费个人博客详细教程 通过Hexo在Github上搭建博客教程 使用hexo+github搭建免费个人博客详细教程 Hexo博客系列（二）：安装和配置 利用n和nvm管理Node的版本]]></content>
+    </entry>
+
+    
+  
+  
+</search>
