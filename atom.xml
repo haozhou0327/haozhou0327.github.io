@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>非著名数据猿</title>
+  <subtitle>大数据，从被忽悠到会忽悠！</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://www.haojunyu.xyz/"/>
+  <updated>2016-12-05T12:52:12.043Z</updated>
+  <id>http://www.haojunyu.xyz/</id>
+  
+  <author>
+    <name>郝洲</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo博客搭建系列（四）：修改主题</title>
+    <link href="http://www.haojunyu.xyz/posts/49147/"/>
+    <id>http://www.haojunyu.xyz/posts/49147/</id>
+    <published>2016-12-05T12:32:03.000Z</published>
+    <updated>2016-12-05T12:52:12.043Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文讲述如何修改Hexo主题。</p>
+<a id="more"></a>
+<p><strong>一、进入<a href="https://hexo.io/themes/" target="_blank" rel="external">Hexo的官网主题专栏</a></strong></p>
+<p><strong>二、挑选自己喜欢的主题</strong></p>
+<p>官网有很多主题供我们选择，首先选择自己喜欢的主题点击进去，然后进入到它的github地址，我们只要把这个地址复制下来(例如我的选择：hexo-theme-next这个主题，github地址：<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">https://github.com/iissnan/hexo-theme-next</a>)</p>
+<p><strong>三、克隆主题</strong></p>
+<p>打开Hexo文件夹下的themes目录（C:\Hexo\themes），右键Git Bash，在命令行输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git clone https://github.com/iissnan/hexo-theme-next</div></pre></td></tr></table></figure>
+<p>回车。</p>
+<p>下载中…等待下载完成。</p>
+<p><strong>四、修改Hexo配置文件</strong></p>
+<p>下载完成后，打开Hexo文件夹下的站点配置文件<code>_config.yml</code></p>
+<p>修改参数：</p>
+<table><tr><td bgcolor="YellowGreen">theme: hexo-theme-next</td></tr></table>
+
+<p><strong>五、部署主题，本地查看效果</strong></p>
+<p>返回Hexo目录，右键Git Bash，输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo g</div><div class="line">$ hexo s</div></pre></td></tr></table></figure>
+<p>打开浏览器，输入 <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a> 即可看见我们的主题已经更换了。</p>
+<p><strong>六、如果效果满意，将它部署到Github上</strong></p>
+<p>打开Hexo文件夹，右键Git Bash，输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo clean</div><div class="line">$ hexo g -d</div></pre></td></tr></table></figure>
+<p>站点配置文件<code>_config.yml</code>中有关deploy的部分：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ deploy:</div><div class="line">$   type: git</div><div class="line">$   repository: https://github.com/haozhou0327/haozhou0327.github.io.git</div><div class="line">$   branch: master</div></pre></td></tr></table></figure>
+<p><strong>七、打开自己的主页，即可看到修改后的效果</strong></p>
+<p>更多修改效果请查看对应主题的说明文档，点击此查看本主题(Next)对应的<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">说明文档</a>。</p>
+<p>本文完。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文讲述如何修改Hexo主题。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Hexo" scheme="http://www.haojunyu.xyz/categories/Hexo/"/>
+    
+    
+      <category term="Github" scheme="http://www.haojunyu.xyz/tags/Github/"/>
+    
+      <category term="Hexo" scheme="http://www.haojunyu.xyz/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo博客搭建系列（三）：部署至Github</title>
+    <link href="http://www.haojunyu.xyz/posts/61018/"/>
+    <id>http://www.haojunyu.xyz/posts/61018/</id>
+    <published>2016-11-19T21:30:58.000Z</published>
+    <updated>2016-12-03T18:39:56.624Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文讲述Hexo部署至Github的过程</p>
+<a id="more"></a>
+<h2 id="注册Github"><a href="#注册Github" class="headerlink" title="注册Github"></a><strong>注册Github</strong></h2><p id="div-border-left-red"> 1. 访问 <a href="https://github.com/" target="_blank" rel="external"><font color="#4caf50"> Github </font></a> 首页<br> 2. 点击右上角的 Sign Up，注册自己的账户<br></p>
+
+<p>注册账号过程，自行Google</p>
+<h2 id="创建项目代码库"><a href="#创建项目代码库" class="headerlink" title="创建项目代码库"></a><strong>创建项目代码库</strong></h2><ol>
+<li><p>注册完登陆后，我们就创建一个我们自己的Github Pages项目。点击<a href="https://github.com/new" target="_blank" rel="external">New repository</a>。</p>
+</li>
+<li><p>创建要点如下：</p>
+</li>
+</ol>
+<p><img src="http://ogunwti03.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20161119052344.png" alt="repository"></p>
+<h2 id="配置SSH密钥"><a href="#配置SSH密钥" class="headerlink" title="配置SSH密钥"></a><strong>配置SSH密钥</strong></h2><p>配置Github的SSH密钥可以让本地git项目与远程的github建立联系，让我们在本地写了代码之后直接通过git操作就可以实现本地代码库与Github代码库同步。操作如下：</p>
+<h3 id="第一步、看是否存在SSH密钥-keys"><a href="#第一步、看是否存在SSH密钥-keys" class="headerlink" title="第一步、看是否存在SSH密钥(keys)"></a><strong>第一步、看是否存在SSH密钥(keys)</strong></h3><p>首先，我们需要看看是否看看本机是否存在SSH keys,打开Git Bash,并运行:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ cd ~/. ssh</div></pre></td></tr></table></figure>
+<p>检查你本机用户home目录下是否存在.ssh目录</p>
+<p>如果，不存在此目录，则进行第二步操作，否则，你本机已经存在ssh公钥和私钥，可以略过第二步，直接进入第三步操作。</p>
+<h3 id="第二步、创建一对新的SSH密钥-keys"><a href="#第二步、创建一对新的SSH密钥-keys" class="headerlink" title="第二步、创建一对新的SSH密钥(keys)"></a><strong>第二步、创建一对新的SSH密钥(keys)</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</div></pre></td></tr></table></figure>
+<p>这将按照你提供的邮箱地址，创建一对密钥</p>
+<table><tr><td bgcolor="YellowGreen">Generating public/private rsa key pair.<br>Enter file in which to save the key (/c/Users/you/.ssh/id_rsa): [Press enter]<br></td></tr></table>
+
+
+<p>直接回车，则将密钥按默认文件进行存储。此时也可以输入特定的文件名，比如/c/Users/you/.ssh/github_rsa</p>
+<p>接着，根据提示，你需要输入密码和确认密码（说到这里，如果你很放心，其实可以不用密码，就是到输密码的地方，都直接回车，所以每次push就只管回车就行了。所谓的最安全的密码，就是没有密码 哈哈）。相关提示如下：</p>
+<table><tr><td bgcolor="YellowGreen">Enter passphrase (empty for no passphrase): [Type a passphrase]<br>Enter same passphrase again: [Type passphrase again]<br></td></tr></table>
+
+<p>输入完成之后，屏幕会显示如下信息：</p>
+<table><tr><td bgcolor="YellowGreen">Your identification has been saved in /c/Users/you/.ssh/id_rsa.<br>Your public key has been saved in /c/Users/you/.ssh/id_rsa.pub.<br>The key fingerprint is:<br>01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@example.com<br></td></tr></table>
+
+<h3 id="第三步、在GitHub账户中添加你的公钥"><a href="#第三步、在GitHub账户中添加你的公钥" class="headerlink" title="第三步、在GitHub账户中添加你的公钥"></a><strong>第三步、在GitHub账户中添加你的公钥</strong></h3><p>运行如下命令，将公钥的内容复制到系统粘贴板(clipboard)中。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ clip &lt; ~/.ssh/id_rsa.pub</div></pre></td></tr></table></figure>
+<p>接着：</p>
+<ol>
+<li><p>登陆GitHub,进入你的Account Settings.<br><img src="http://ogunwti03.bkt.clouddn.com/SSH-github-setting.png" alt="SSH-github-setting"></p>
+</li>
+<li><p>选择SSH Keys<br><img src="http://ogunwti03.bkt.clouddn.com/SSH-github-setting-SSH.png" alt="SSH-github-setting-SSH"></p>
+</li>
+<li><p>粘贴密钥，添加即可<br><img src="http://ogunwti03.bkt.clouddn.com/SSH-github-SSH-OK.png" alt="SSH-github-SSH-OK"></p>
+</li>
+</ol>
+<h3 id="第四步、测试"><a href="#第四步、测试" class="headerlink" title="第四步、测试"></a><strong>第四步、测试</strong></h3><p>可以输入下面的命令，看看设置是否成功，git@github.com的部分不要修改：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh -T git@github.com</div></pre></td></tr></table></figure>
+<p>如果是下面的反馈：</p>
+<table><tr><td bgcolor="YellowGreen">The authenticity of host ‘github.com (207.97.227.239)’ can’t be established.<br>RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.<br>Are you sure you want to continue connecting (yes/no)?<br></td></tr></table>
+
+<p>不要紧张，输入yes就好，然后会看到：</p>
+<table><tr><td bgcolor="YellowGreen">Hi cnfeat! You’ve successfully authenticated, but GitHub does not provide shell access.<br></td></tr></table>
+
+<h3 id="第五步、设置用户信息"><a href="#第五步、设置用户信息" class="headerlink" title="第五步、设置用户信息"></a><strong>第五步、设置用户信息</strong></h3><p>现在你已经可以通过SSH链接到GitHub了，还有一些个人信息需要完善的。<br>Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信息来做权限的处理，输入下面的代码进行个人信息的设置，把名称和邮箱替换成你自己的，名字必须是你的真名，而不是GitHub的昵称。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git config --global user.name &quot;cnfeat&quot;//用户名</div><div class="line">$ git config --global user.email  &quot;cnfeat@gmail.com&quot;//填写自己的邮箱</div></pre></td></tr></table></figure>
+<h3 id="第六步、SSH-Key配置成功"><a href="#第六步、SSH-Key配置成功" class="headerlink" title="第六步、SSH Key配置成功"></a><strong>第六步、SSH Key配置成功</strong></h3><p>本机已成功连接到github。</p>
+<p>如有问题，请参考：</p>
+<p id="div-border-left-red"> <a href="https://help.github.com/articles/generating-an-ssh-key/" target="_blank" rel="external">GitHub Help - Generating SSH Keys</a><br><br> <a href="https://help.github.com/articles/error-permission-denied-publickey/" target="_blank" rel="external">Error: Permission denied (publickey)</a><br></p>
+
+<h2 id="将本地的Hexo文件更新到Github的库中"><a href="#将本地的Hexo文件更新到Github的库中" class="headerlink" title="将本地的Hexo文件更新到Github的库中"></a><strong>将本地的Hexo文件更新到Github的库中</strong></h2><h3 id="第一步、登录Github打开自己的项目-username-github-io"><a href="#第一步、登录Github打开自己的项目-username-github-io" class="headerlink" title="第一步、登录Github打开自己的项目 username.github.io"></a><strong>第一步、登录Github打开自己的项目 username.github.io</strong></h3><p><img src="http://ogunwti03.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20161119053948.png" alt="user"></p>
+<h3 id="第二步、打开之后，点击HTTPS，选择HTTPS类型地址，复制地址"><a href="#第二步、打开之后，点击HTTPS，选择HTTPS类型地址，复制地址" class="headerlink" title="第二步、打开之后，点击HTTPS，选择HTTPS类型地址，复制地址"></a><strong>第二步、打开之后，点击HTTPS，选择HTTPS类型地址，复制地址</strong></h3><p><img src="http://ogunwti03.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20161119054019.png" alt="https"></p>
+<h3 id="第三步、打开一开始创建的Hexo文件夹（如C-Hexo），用notepad-或者sublime-text打开刚文件夹下的-config-yml文件"><a href="#第三步、打开一开始创建的Hexo文件夹（如C-Hexo），用notepad-或者sublime-text打开刚文件夹下的-config-yml文件" class="headerlink" title="第三步、打开一开始创建的Hexo文件夹（如C:\Hexo），用notepad++或者sublime text打开刚文件夹下的_config.yml文件"></a><strong>第三步、打开一开始创建的Hexo文件夹（如C:\Hexo），用notepad++或者sublime text打开刚文件夹下的_config.yml文件</strong></h3><p><img src="http://ogunwti03.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20161119054115.png" alt="config"></p>
+<h3 id="第四步、在配置文件里作如下修改，保存"><a href="#第四步、在配置文件里作如下修改，保存" class="headerlink" title="第四步、在配置文件里作如下修改，保存"></a><strong>第四步、在配置文件里作如下修改，保存</strong></h3><p><img src="http://ogunwti03.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20161119054150.png" alt="deploy"></p>
+<h3 id="第五步、在Hexo文件夹下执行"><a href="#第五步、在Hexo文件夹下执行" class="headerlink" title="第五步、在Hexo文件夹下执行"></a><strong>第五步、在Hexo文件夹下执行</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo g</div><div class="line">$ hexo d</div></pre></td></tr></table></figure>
+<p>或者直接执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo g -d</div></pre></td></tr></table></figure>
+<p>执行完之后会让你输入github的账号和密码，输入完后就可以登录我们自己的部署在Github Pages服务器上的博客了。对应的地址是 username.github.io。</p>
+<h3 id="第六步、在浏览器上输入自己的主页地址"><a href="#第六步、在浏览器上输入自己的主页地址" class="headerlink" title="第六步、在浏览器上输入自己的主页地址"></a><strong>第六步、在浏览器上输入自己的主页地址</strong></h3><p>在浏览器上输入即可看到我们自己的博客</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文讲述Hexo部署至Github的过程&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Hexo" scheme="http://www.haojunyu.xyz/categories/Hexo/"/>
+    
+    
+      <category term="Github" scheme="http://www.haojunyu.xyz/tags/Github/"/>
+    
+      <category term="Hexo" scheme="http://www.haojunyu.xyz/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo博客搭建系列（二）：Hexo安装</title>
+    <link href="http://www.haojunyu.xyz/posts/10749/"/>
+    <id>http://www.haojunyu.xyz/posts/10749/</id>
+    <published>2016-11-18T16:30:58.000Z</published>
+    <updated>2016-12-03T18:30:29.435Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文讲述Hexo的安装</p>
+<a id="more"></a>
+<p>最好的教程（没有之一）是：<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">官方文档</a></p>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a><strong>安装Hexo</strong></h2><p>所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g hexo-cli</div></pre></td></tr></table></figure>
+<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a><strong>初始化</strong></h2><p>安装 Hexo 完成后，在某个位置（比如E盘）新建一个文件夹，命名为“Hexo”或者其他均可，然后<strong>进入此文件夹</strong>右键打开Git，执行下列命令，Hexo 将会在该文件夹中新建所需要的文件。即创建工作目录。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo init</div><div class="line">$ npm install</div></pre></td></tr></table></figure>
+<p>命令执行完成后，会生成一系列目录文件。具体每个文件尤其是配置文件_config.yml是做什么的，参考官方文档，这里不详细说明。</p>
+<h2 id="安装依赖包"><a href="#安装依赖包" class="headerlink" title="安装依赖包"></a><strong>安装依赖包</strong></h2><p>为了以后避免出错，就将下面的插件都一次性安装完。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">npm install hexo-generator-index --save</div><div class="line">npm install hexo-generator-archive --save</div><div class="line">npm install hexo-generator-category --save</div><div class="line">npm install hexo-generator-tag --save</div><div class="line">npm install hexo-server --save</div><div class="line">npm install hexo-deployer-git --save</div><div class="line">npm install hexo-deployer-heroku --save</div><div class="line">npm install hexo-deployer-rsync --save</div><div class="line">npm install hexo-deployer-openshift --save</div><div class="line">npm install hexo-renderer-marked@0.2 --save</div><div class="line">npm install hexo-renderer-stylus@0.2 --save</div><div class="line">npm install hexo-generator-feed@1 --save</div><div class="line">npm install hexo-generator-sitemap@1 --save</div></pre></td></tr></table></figure>
+<h2 id="生成静态页面"><a href="#生成静态页面" class="headerlink" title="生成静态页面"></a><strong>生成静态页面</strong></h2><p>使用 cd 命令到你的hexo安装目录（工作目录），执行如下命令：<br>（不清楚怎么使用cd命令的话，就直接手动打开hexo的安装目录，然后在此文件夹下右键打开Git）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>简写 hexo g</p>
+<p>必须到你新建的hexo安装目录下执行，否则不成功</p>
+<h2 id="本地启动测试"><a href="#本地启动测试" class="headerlink" title="本地启动测试"></a><strong>本地启动测试</strong></h2><p>继续输入命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>简写 hexo s</p>
+<p>到此本地服务已经完成，可以在本地浏览器中输入<strong><a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a></strong>进行查看。</p>
+<p>就可以看到如下的画面了：</p>
+<p><img src="http://ogunwti03.bkt.clouddn.com/2016111901.png" alt="hello-world"></p>
+<p>关于Hexo安装的部分就写到这里了。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文讲述Hexo的安装&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Hexo" scheme="http://www.haojunyu.xyz/categories/Hexo/"/>
+    
+    
+      <category term="Github" scheme="http://www.haojunyu.xyz/tags/Github/"/>
+    
+      <category term="Hexo" scheme="http://www.haojunyu.xyz/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo博客搭建系列（一）：环境配置</title>
+    <link href="http://www.haojunyu.xyz/posts/32224/"/>
+    <id>http://www.haojunyu.xyz/posts/32224/</id>
+    <published>2016-11-18T15:35:58.000Z</published>
+    <updated>2016-12-05T12:40:44.151Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文讲述使用Github Pages与Hexo搭建独立博客的环境配置</p>
+<a id="more"></a>
+<p>看了几十篇教程，折腾了三个晚上，最终发现，最好的教程（没有之一）是：<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">官方文档</a></p>
+<p>这是Hexo官方文档（中文版），如果你的英语水平很高，就选择英文版吧。</p>
+<p>在文章《<a href="http://www.haojunyu.xyz/posts/42985/">一个小白搭建博客的心路历程</a>》中已经对Hexo博客搭建有了一些初步介绍，以及搭建流程介绍。这篇文章开始详细介绍搭建过程。</p>
+<h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a><strong>安装Git</strong></h2><p id="div-border-left-red"> Windows：下载并安装 <a href="https://git-scm.com/download/win" target="_blank" rel="external"><font color="#4caf50"> git </font></a>. </p>
+
+<p>安装步骤：</p>
+<p><img src="http://ogunwti03.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20161119033805.png" alt="1"></p>
+<p>这一步中其他的勾不勾选无所谓，“Git Bash here”和“Git GUI here”最好都勾选：<br><img src="http://ogunwti03.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20161119033914.png" alt="2"></p>
+<p><img src="http://ogunwti03.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20161119033942.png" alt="3"></p>
+<p>这一步中默认是第一个，选择默认就好。选第二个也无所谓。<br><img src="http://ogunwti03.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20161119034026.png" alt="4"></p>
+<p><img src="http://ogunwti03.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20161119034049.png" alt="5"></p>
+<p><img src="http://ogunwti03.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20161119034109.png" alt="6"></p>
+<p><img src="http://ogunwti03.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20161119034127.png" alt="7"></p>
+<p>等待…至此Git就安装成功了。</p>
+<p>至于怎么打开Git Bash here，右键即可。</p>
+<p id="div-border-left-red"> Git入门教程：<a href="http://git.oschina.net/progit/" target="_blank" rel="external"><font color="#4caf50"> Pro Git（中文版）</font></a> </p>
+
+<h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a><strong>安装Node.js</strong></h2><p id="div-border-left-red"> Node.js下载：<a href="https://nodejs.org/en/" target="_blank" rel="external"><font color="#4caf50">官网</font></a> </p>
+
+<p>安装过程几乎一路“next（下一步）”，此处不详细截图。</p>
+<p>Hexo的官方文档说安装 Node.js 的最佳方式是使用 <a href="https://github.com/creationix/nvm" target="_blank" rel="external">nvm</a></p>
+<p>本人最开始直接下载的安装程序，最后发现nvm这种方式更好，推荐使用。</p>
+<p>cURL:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ curl https://raw.github.com/creationix/nvm/v1.1.1/install.sh | sh</div></pre></td></tr></table></figure>
+<p>在这里强烈建议看这篇文章：<a href="http://weizhifeng.net/node-version-management-via-n-and-nvm.html" target="_blank" rel="external">利用n和nvm管理Node的版本</a></p>
+<p>官网给出的方式中间使用的是<strong>master</strong>，不清楚具体什么意思，但直接使用好像有点问题。我直接按照这篇文章改成最新的版本号：<strong>v1.1.1</strong>，成功安装。</p>
+<p>关于安装nvm的另一种方法：</p>
+<p>Wget:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh</div></pre></td></tr></table></figure>
+<p>本人尝试过，貌似有点不太好用，没有深究。</p>
+<p>接下来安装node：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ nvm install 7.0.0</div></pre></td></tr></table></figure>
+<p>使用指定的版本</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ nvm use 7.0.0</div></pre></td></tr></table></figure>
+<p>这里官方文档是： <table><tr><td bgcolor="YellowGreen"> $ nvm install stable </td></tr></table> （好像不太好使，我没有深究）</p>
+<p>查看当前已经安装的版本</p>
+<table><tr><td bgcolor="YellowGreen">$ nvm ls<br>.nvm<br></td></tr></table>
+
+
+<p>查看正在使用的版本</p>
+<table><tr><td bgcolor="YellowGreen">$ nvm current<br>v1.1.1<br></td></tr></table>
+
+<p>至此Node.js就安装成功了，博客搭建所需的环境就配置好了。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文讲述使用Github Pages与Hexo搭建独立博客的环境配置&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Hexo" scheme="http://www.haojunyu.xyz/categories/Hexo/"/>
+    
+    
+      <category term="Github" scheme="http://www.haojunyu.xyz/tags/Github/"/>
+    
+      <category term="Hexo" scheme="http://www.haojunyu.xyz/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一个小白搭建博客的心路历程</title>
+    <link href="http://www.haojunyu.xyz/posts/42985/"/>
+    <id>http://www.haojunyu.xyz/posts/42985/</id>
+    <published>2016-11-15T15:35:58.000Z</published>
+    <updated>2016-12-03T17:29:59.974Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://ogunwti03.bkt.clouddn.com/2016111801.jpg" alt="hello-world"></p>
+<p>欢迎访问我的博客：<a href="http://www.haojunyu.xyz/"><font color="#f44336"><strong>非著名数据猿</strong></font></a></p>
+<p>Github地址：<a href="https://github.com/haozhou0327/haozhou0327.github.io" target="_blank" rel="external">https://github.com/haozhou0327/haozhou0327.github.io</a></p>
+<p>很久之前就想搭建一个博客，为什么会有这个想法呢？第一个原因，是可以装B（哈哈哈）；第二个原因，是有一种成就感（其实还是装B，哈哈）。虽然现在已经不是博客盛行的年代了，如今有诸多自媒体平台诞生，微信、简书、头条号等等诸如此类，真的太多了，但是，依旧想自己动手搭建一个博客，体验一下搭建的过程，也是一种乐趣。</p>
+<a id="more"></a>
+<p><em>题外话：说到这里，推荐阅读一篇文章——《<a href="http://www.fox2008.cn/ebook/ylyw/yiwen/content/yiwe20060213.html" target="_blank" rel="external">博客盛行的年代</a>》（作者：包慧怡），2006年的一篇文章，最后一段文字是这么写的：“有人视博客为交际工具，广结缘，频通信；有人视博客为职场备案，勤整理，深反省；有人视博客为弄墨圃地，今晨文为情声，明晌为文造情；有人视博客为第二生命，一日不博，心痒难定。说到底，博客还是个没要紧的东西。所谓我博故我在，终究不过是懒于思索又深恐自己懒于思索（或者说，深恐被认为懒于思索）的人用来鞭笞自己的形式主义。各路高人看客大可各遂所愿，按需偷窥，其实，这也是网络时代最看得见摸得着的民主之一。”你是如何看待博客呢？</em></p>
+<hr>
+<p>回归正题。</p>
+<p>名博<a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html" target="_blank" rel="external">阮一峰</a>曾经说过：</p>
+<p id="div-border-left-red"> 喜欢写Blog的人，会经历三个阶段。<br><br> 1. 第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。<br> 2. 第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。<br> 3. 第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。<br></p>
+
+<p>如果你想到达第三个阶段，选择在github上搭建就是一个很好的思路。</p>
+<p>于是乎，我开始上网找教程，第一感觉是兴奋，因为看到了太多的教程。当你在搜索引擎搜索“Hexo和Github搭建博客”时，心里不免感叹“哇，这么多教程，真好”。虽然我也是跟着这些教程走过来的，但是我想说，看教程很简单，但如果不亲自去尝试、去折腾，真的不能很好的应对每一个细节。由于整个搭建过程的思路和步骤是不变的，所以很多教程内容差不多。</p>
+<p>在看了很多篇教程之后，决心开始自己动手操作，前后折腾了3个晚上（其实真的要不了很久，也是因为走了一点弯路），终于搭建完成，也修改了一部分配置，以后逐步增加更多好玩的功能！如果你发现有什么bug，或者有什么建议，欢迎一起交流。个人微信/QQ：<span id="inline-green">598957481</span>。</p>
+<p>在博客搭建完成之后，有一位群友也想自己搭建，认为网上的教程总是出现一些自己不知道怎么解决的问题，所以我就想写一个出来，我这个不能称之为教程，只能算记录下自己搭建的过程。</p>
+<p>本人非计算机出身，也非程序猿，仅仅是个人喜好，对这个比较感兴趣，我会尽可能详细的整理这个过程，供参考。可能也会引用到其他作者的一些内容，在此感谢提供教程的作者们。</p>
+<p>在此之前，先推荐阅读几篇文章：</p>
+<p id="div-border-left-red">1. <a href="https://zhuanlan.zhihu.com/p/19743861" target="_blank" rel="external"><font color="#4caf50"> 为什么你要写博客？ </font> </a><br> 2. <a href="https://zhuanlan.zhihu.com/p/19743255" target="_blank" rel="external"><font color="#4caf50"> 我的博客时代 </font> </a><br></p>
+
+<p>我觉得有一个作者的一句话写的很好：为什么要搭建一个独立博客？因为独立的才是自己的。</p>
+<p>入门槛是什么？</p>
+<p id="div-border-left-red">我的总结是：<br><br> 1. 经得起折腾<br> 2. 敢于钻研<br> 3. 有耐心<br></p>
+
+<hr>
+<p><img src="http://ogunwti03.bkt.clouddn.com/2016111802.png" alt="Github + Hexo"></p>
+<p>入门知识：</p>
+<p id="div-border-left-red"> 1. GitHub Pages是什么？——请自行google（不要用baidu，不要用baidu，不要用baidu，关于搜索引擎的使用，本人曾被 我最鄙视的某个领导 鄙视过。）<br> 2. Hexo是什么？——请自行google。<br></p>
+
+<p>准备工作：</p>
+<p id="div-border-left-red">在开始一切之前，你必须已经具备以下条件：<br><br> 1. 有一个github账号，没有的话去注册一个（注册账号教程请自行google）；<br> 2. 安装了node.js、npm，并了解相关基础知识；<br> 3. 安装了git（或者其它git客户端）。<br></p>
+
+<p>后文会详细讲述安装过程。</p>
+<p>本人的安装环境：</p>
+<p id="div-border-left-red">1. Windows10系统 64位<br> 2. <a href="https://nodejs.org/en/" target="_blank" rel="external"><font color="#4caf50"> node.js </font> </a>@v7.0.0<br> 3. <a href="https://git-scm.com/" target="_blank" rel="external"><font color="#4caf50"> git </font> </a>@2.10.2<br> 4. <a href="https://hexo.io/zh-cn/" target="_blank" rel="external"><font color="#4caf50"> hexo </font> </a>@3.2.2<br></p>
+
+<p>OK,这篇文章就到这里，从下一篇文章开始，会详细介绍搭建过程。</p>
+<p>附思维导图：</p>
+<p><img src="http://ogunwti03.bkt.clouddn.com/2016111803.jpeg" alt="思维导图"></p>
+<p>附参考教程：</p>
+<ol>
+<li><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external"><font color="#4caf50"> 官方文档 </font> </a></li>
+<li><a href="http://blog.csdn.net/poem_of_sunshine/article/details/29369785/" target="_blank" rel="external"><font color="#4caf50"> 如何搭建一个独立博客——简明Github Pages与Hexo教程 </font> </a></li>
+<li><a href="http://www.jianshu.com/p/15ae47eddc56" target="_blank" rel="external"><font color="#4caf50"> 小白独立搭建博客–Github Pages和Hexo简明教程 </font> </a></li>
+<li><a href="http://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html" target="_blank" rel="external"><font color="#4caf50"> 使用hexo+github搭建免费个人博客详细教程 </font> </a></li>
+<li><a href="http://www.jianshu.com/p/858ecf233db9" target="_blank" rel="external"><font color="#4caf50"> 通过Hexo在Github上搭建博客教程 </font> </a></li>
+<li><a href="http://blog.liuxianan.com/build-blog-website-by-hexo-github.html" target="_blank" rel="external"><font color="#4caf50"> 使用hexo+github搭建免费个人博客详细教程 </font> </a></li>
+<li><a href="http://www.isetsuna.com/hexo/install-config/" target="_blank" rel="external"><font color="#4caf50"> Hexo博客系列（二）：安装和配置 </font> </a></li>
+<li><a href="http://weizhifeng.net/node-version-management-via-n-and-nvm.html" target="_blank" rel="external"><font color="#4caf50"> 利用n和nvm管理Node的版本 </font> </a></li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://ogunwti03.bkt.clouddn.com/2016111801.jpg&quot; alt=&quot;hello-world&quot;&gt;&lt;/p&gt;
+&lt;p&gt;欢迎访问我的博客：&lt;a href=&quot;http://www.haojunyu.xyz/&quot;&gt;&lt;font color=&quot;#f44336&quot;&gt;&lt;strong&gt;非著名数据猿&lt;/strong&gt;&lt;/font&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Github地址：&lt;a href=&quot;https://github.com/haozhou0327/haozhou0327.github.io&quot;&gt;https://github.com/haozhou0327/haozhou0327.github.io&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;很久之前就想搭建一个博客，为什么会有这个想法呢？第一个原因，是可以装B（哈哈哈）；第二个原因，是有一种成就感（其实还是装B，哈哈）。虽然现在已经不是博客盛行的年代了，如今有诸多自媒体平台诞生，微信、简书、头条号等等诸如此类，真的太多了，但是，依旧想自己动手搭建一个博客，体验一下搭建的过程，也是一种乐趣。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Hexo" scheme="http://www.haojunyu.xyz/categories/Hexo/"/>
+    
+    
+      <category term="Github" scheme="http://www.haojunyu.xyz/tags/Github/"/>
+    
+      <category term="Hexo" scheme="http://www.haojunyu.xyz/tags/Hexo/"/>
+    
+  </entry>
+  
+</feed>
