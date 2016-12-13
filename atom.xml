@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.haojunyu.xyz/"/>
-  <updated>2016-12-13T13:30:59.488Z</updated>
+  <updated>2016-12-13T13:35:31.925Z</updated>
   <id>http://www.haojunyu.xyz/</id>
   
   <author>
@@ -17,10 +17,10 @@
   
   <entry>
     <title>数据科学的做和不做</title>
-    <link href="http://www.haojunyu.xyz/posts/undefined/"/>
-    <id>http://www.haojunyu.xyz/posts/undefined/</id>
+    <link href="http://www.haojunyu.xyz/posts/null/"/>
+    <id>http://www.haojunyu.xyz/posts/null/</id>
     <published>2016-12-13T13:22:29.000Z</published>
-    <updated>2016-12-13T13:30:59.488Z</updated>
+    <updated>2016-12-13T13:35:31.925Z</updated>
     
     <content type="html"><![CDATA[<p>What is a data scientist?</p>
 <a id="more"></a>
