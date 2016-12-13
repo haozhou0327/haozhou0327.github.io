@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[数据科学的做和不做]]></title>
+      <url>%2Fposts%2Fundefined%2F</url>
+      <content type="text"><![CDATA[What is a data scientist? 英文原文： DO’S AND DON’TS OF DATA SCIENCEDon’t Start with the DataDo Start with a Good QuestionDon’t think one person can do it allDo build a well-rounded teamDon’t only use one toolDo use the best tool for the jobDon’t brag about the size of your dataDo collect relevant dataDon’t ignore domain knowledgeDo consult a subject matter expertDon’t publish a table of numbersDo create informative chartsDon’t use just your own dataDo enhance your analysis with open dataDon’t do all the work yourselfDo partner with local universitiesDon’t always build your own toolsDo use lots of open source toolsDon’t keep all your findings to yourselfDo share your analysis and results with the world! 中文译文： 《数据科学的做和不做》不要仅仅从数据方面入手你需要在开头准备一个问题不要以为一个人什么都能做你需要建立一个优秀的团队不要单纯的使用一种工具你需要根据实际使用最好的工具不要吹嘘你的数据量怎么样你需要自己去收集一些数据不要忽略任何一个行业的知识勤向行业专家咨询相关的问题不要发布仅有数据的表格你需要创建一整张信息表不要局限于你现有的数据你需要从广阔的数据源里提高你的分析质量不要一个人揽下所有的工作你需要在地方高校寻找一位合作伙伴不要把自己的发现藏于心里你需要把它分享到整个世界 原文链接：http://101.datascience.community/2016/04/25/dos-and-donts-of-data-science/译文链接：http://shujuren.org/article/92.html]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[Hexo博客搭建系列（四）：修改主题]]></title>
       <url>%2Fposts%2F49147%2F</url>
       <content type="text"><![CDATA[本文讲述如何修改Hexo主题。 一、进入Hexo的官网主题专栏 二、挑选自己喜欢的主题 官网有很多主题供我们选择，首先选择自己喜欢的主题点击进去，然后进入到它的github地址，我们只要把这个地址复制下来(例如我的选择：hexo-theme-next这个主题，github地址：https://github.com/iissnan/hexo-theme-next) 三、克隆主题 打开Hexo文件夹下的themes目录（C:\Hexo\themes），右键Git Bash，在命令行输入： 1$ git clone https://github.com/iissnan/hexo-theme-next 回车。 下载中…等待下载完成。 四、修改Hexo配置文件 下载完成后，打开Hexo文件夹下的站点配置文件_config.yml 修改参数： theme: hexo-theme-next 五、部署主题，本地查看效果 返回Hexo目录，右键Git Bash，输入： 12$ hexo g$ hexo s 打开浏览器，输入 http://localhost:4000/ 即可看见我们的主题已经更换了。 六、如果效果满意，将它部署到Github上 打开Hexo文件夹，右键Git Bash，输入 12$ hexo clean$ hexo g -d 站点配置文件_config.yml中有关deploy的部分： 1234$ deploy:$ type: git$ repository: https://github.com/haozhou0327/haozhou0327.github.io.git$ branch: master 七、打开自己的主页，即可看到修改后的效果 更多修改效果请查看对应主题的说明文档，点击此查看本主题(Next)对应的说明文档。 本文完。]]></content>
