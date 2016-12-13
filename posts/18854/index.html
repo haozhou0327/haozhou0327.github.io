@@ -96,7 +96,7 @@
 <meta property="og:url" content="http://www.haojunyu.xyz/posts/18854/index.html">
 <meta property="og:site_name" content="非著名数据猿">
 <meta property="og:description" content="《无埋点实现监测的真相——革新还是噱头？》是迄今为止我看到过的关于埋点解释的文章中最为清晰最容易理解的一篇文章。">
-<meta property="og:updated_time" content="2016-12-13T15:23:22.780Z">
+<meta property="og:updated_time" content="2016-12-13T15:26:58.297Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《无埋点实现监测的真相——革新还是噱头？》阅读笔记">
 <meta name="twitter:description" content="《无埋点实现监测的真相——革新还是噱头？》是迄今为止我看到过的关于埋点解释的文章中最为清晰最容易理解的一篇文章。">
@@ -430,7 +430,7 @@
 <a id="more"></a>
 <p>文章来源：网站分析在中国<br>链接：<a href="http://www.chinawebanalytics.cn/auto-event-tracking-good-bad-ugly/" target="_blank" rel="external">http://www.chinawebanalytics.cn/auto-event-tracking-good-bad-ugly/</a></p>
 <p>这篇文章对埋点的解释足够清晰，也很容易让不懂技术的人理解，在此整理一下关于数据采集和埋点的笔记。</p>
-<p><strong>1、检测代码、SDK、埋点（英文名：event tracking）</strong></p>
+<p><strong>1、检测代码/SDK/埋点（英文名：event tracking）</strong></p>
 <p>（1）监测代码与SDK</p>
 <p>为了监测网站上用户的行为，或者app上用户的行为，需要在网站的每一页或者app中加上一些程序代码（这里就不考虑日志分析这种方法了）。这样的程序代码，在网站上叫监测代码，在app中叫SDK（Software Development Kit）。</p>
 <p>（2）基础代码</p>
@@ -470,7 +470,8 @@
 <p>无埋点<br>　　对象：任何位置；<br>　　动作：点击；<br>　　数据：点击的位置信息</p>
 <p>无埋点/可视化埋点的共同点：都是把数据采集三要素中的（动作/条件），都固定为点击，采集的（数据）都是用户点击的位置，或者是按钮的名称；</p>
 <p>无埋点/可视化埋点区别：（对象）不同；无埋点对对象的筛选/定位，在接收服务器端做，可视化埋点对对象的筛选/定位，在用户端实现。</p>
-<p>标签管理工具<br>主流的标签管理工具，像Google的DTM，Adobe的DTM，在数据采集功能（埋点）上（注：标签管理工具里面还有很多非数据采集的功能点），都是把对象、动作/条件、数据，这三点，区分在不同的功能模块中，在埋点时，一步一步的完成这三个流程，来实现数据采集（埋点）。</p>
+<p>标签管理工具</p>
+<p>主流的标签管理工具，像Google的DTM，Adobe的DTM，在数据采集功能（埋点）上（注：标签管理工具里面还有很多非数据采集的功能点），都是把对象、动作/条件、数据，这三点，区分在不同的功能模块中，在埋点时，一步一步的完成这三个流程，来实现数据采集（埋点）。</p>
 <p>以GTM为例：</p>
 <p>GTM里面有触发器、代码、变量三块，他们分别的对应关系如下：</p>
 <p>触发器，就是完成数据采集中，（动作/条件）的这个点</p>
